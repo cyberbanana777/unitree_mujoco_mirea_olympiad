@@ -193,34 +193,34 @@
   </worldbody>
 
 <actuator>
-    <motor class="h1" name="right_hip_roll_joint" joint="right_hip_roll_joint" ctrlrange="-200 200"/>
-    <motor class="h1" name="right_hip_pitch_joint" joint="right_hip_pitch_joint" ctrlrange="-200 200"/>
-    <motor class="h1" name="right_knee_joint" joint="right_knee_joint" ctrlrange="-300 300"/>
+    <motor class="h1" name="right_hip_roll_joint" joint="right_hip_roll_joint" ctrlrange="-0.43 0.43"/>
+    <motor class="h1" name="right_hip_pitch_joint" joint="right_hip_pitch_joint" ctrlrange="-3.14 2.53"/>
+    <motor class="h1" name="right_knee_joint" joint="right_knee_joint" ctrlrange="-0.26 2.05"/>
 
-    <motor class="h1" name="left_hip_roll_joint" joint="left_hip_roll_joint" ctrlrange="-200 200"/>
-    <motor class="h1" name="left_hip_pitch_joint" joint="left_hip_pitch_joint" ctrlrange="-200 200"/>
-    <motor class="h1" name="left_knee_joint" joint="left_knee_joint" ctrlrange="-300 300"/>
+    <motor class="h1" name="left_hip_roll_joint" joint="left_hip_roll_joint" ctrlrange="-0.43 0.43"/>
+    <motor class="h1" name="left_hip_pitch_joint" joint="left_hip_pitch_joint" ctrlrange="-3.14 2.53"/>
+    <motor class="h1" name="left_knee_joint" joint="left_knee_joint" ctrlrange="-0.26 2.05"/>
 
-    <motor class="h1" name="torso_joint" joint="torso_joint" ctrlrange="-200 200"/>
-    <motor class="h1" name="left_hip_yaw_joint" joint="left_hip_yaw_joint" ctrlrange="-200 200"/>
-    <motor class="h1" name="right_hip_yaw_joint" joint="right_hip_yaw_joint" ctrlrange="-200 200"/>
-
-
-    <motor class="h1" name="not_use_joint" joint="not_use_joint" />
+    <motor class="h1" name="torso_joint" joint="torso_joint" ctrlrange="-2.35 2.35"/>
+    <motor class="h1" name="left_hip_yaw_joint" joint="left_hip_yaw_joint" ctrlrange="-0.43 0.43"/>
+    <motor class="h1" name="right_hip_yaw_joint" joint="right_hip_yaw_joint" ctrlrange="-0.43 0.43"/>
 
 
-    <motor class="h1" name="left_ankle_joint" joint="left_ankle_joint" ctrlrange="-40 40"/>
-    <motor class="h1" name="right_ankle_joint" joint="right_ankle_joint" ctrlrange="-40 40"/>
+    <motor class="h1" name="not_use_joint" joint="not_use_joint" ctrlrange= "0.0 1.0" />
+
+
+    <motor class="h1" name="left_ankle_joint" joint="left_ankle_joint" ctrlrange="-0.87 0.52"/>
+    <motor class="h1" name="right_ankle_joint" joint="right_ankle_joint" ctrlrange="-0.87 0.52"/>
     
-    <motor class="h1" name="right_shoulder_pitch_joint" joint="right_shoulder_pitch_joint" ctrlrange="-40 40"/>
-    <motor class="h1" name="right_shoulder_roll_joint" joint="right_shoulder_roll_joint" ctrlrange="-40 40"/>
-    <motor class="h1" name="right_shoulder_yaw_joint" joint="right_shoulder_yaw_joint" ctrlrange="-18 18"/>
-    <motor class="h1" name="right_elbow_joint" joint="right_elbow_joint" ctrlrange="-18 18"/>
+    <motor class="h1" name="right_shoulder_pitch_joint" joint="right_shoulder_pitch_joint" ctrlrange="-2.87 2.87"/>
+    <motor class="h1" name="right_shoulder_roll_joint" joint="right_shoulder_roll_joint" ctrlrange="-3.11 0.34"/>
+    <motor class="h1" name="right_shoulder_yaw_joint" joint="right_shoulder_yaw_joint" ctrlrange="-4.45 1.3"/>
+    <motor class="h1" name="right_elbow_joint" joint="right_elbow_joint" ctrlrange="-1.25 2.61"/>
 
-    <motor class="h1" name="left_shoulder_pitch_joint" joint="left_shoulder_pitch_joint" ctrlrange="-40 40"/>
-    <motor class="h1" name="left_shoulder_roll_joint" joint="left_shoulder_roll_joint" ctrlrange="-40 40"/>
-    <motor class="h1" name="left_shoulder_yaw_joint" joint="left_shoulder_yaw_joint" ctrlrange="-18 18"/>
-    <motor class="h1" name="left_elbow_joint" joint="left_elbow_joint" ctrlrange="-18 18"/>
+    <motor class="h1" name="left_shoulder_pitch_joint" joint="left_shoulder_pitch_joint" ctrlrange="-2.87 2.87"/>
+    <motor class="h1" name="left_shoulder_roll_joint" joint="left_shoulder_roll_joint" ctrlrange="-0.34 3.11"/>
+    <motor class="h1" name="left_shoulder_yaw_joint" joint="left_shoulder_yaw_joint" ctrlrange="-1.3 4.45"/>
+    <motor class="h1" name="left_elbow_joint" joint="left_elbow_joint" ctrlrange="-1.25 2.61"/>
   </actuator>
 
   <sensor>
@@ -305,6 +305,7 @@
     0
     0 0 0 0
     0 0 0 0
-    0"/>
+    0 
+    0 0 0 0 0 "/>
   </keyframe>
 </mujoco>
