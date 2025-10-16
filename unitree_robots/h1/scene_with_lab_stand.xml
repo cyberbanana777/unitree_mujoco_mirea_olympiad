@@ -71,9 +71,11 @@
 
     </body>
     
+    <!--
     <body pos="0 3 2" quat='0.7071 0.7071 0 0'>
       <geom type="plane" size="2 1 0.01" material="banner_material"/>
     </body>
+    -->
 
   </worldbody>
 
