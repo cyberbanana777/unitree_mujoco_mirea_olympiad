@@ -12,8 +12,22 @@
       rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8" width="300" height="300" />
     <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5"
       reflectance="0.2" />
-    <texture name="banner_texture" type="2d" file="joke.png"/>
-    <material name="banner_material" texture="banner_texture"/>
+    
+    <!-- Разные текстуры для разных кнопок -->
+    <texture name="banner_texture1" type="2d" file="joke_1.png"/>
+    <texture name="banner_texture2" type="2d" file="joke_2.png"/>
+    <texture name="banner_texture3" type="2d" file="joke_3.png"/>
+    <texture name="banner_texture4" type="2d" file="joke_4.png"/>
+    <texture name="banner_texture5" type="2d" file="joke_5.png"/>
+    
+    <material name="banner_material1" texture="banner_texture1"/>
+    <material name="banner_material2" texture="banner_texture2"/>
+    <material name="banner_material3" texture="banner_texture3"/>
+    <material name="banner_material4" texture="banner_texture4"/>
+    <material name="banner_material5" texture="banner_texture5"/>
+    
+    <!-- Материал по умолчанию (скрытый) -->
+    <material name="banner_material_default" texture="banner_texture1" rgba="1 1 1 0"/>
   </asset>
 
   <worldbody>
@@ -21,15 +35,15 @@
     <geom name="floor" size="0 0 0.05" type="plane" material="groundplane" />
 
     <!-- Вертикальный стенд для кнопок -->
-    <body name="button_panel" pos="0.5 -0.225 1.2" quat='0.9763 -0.2164 0 0'> <!-- Сместим стенд дальше и ниже -->
-      <geom type="box" size="0.01 0.3 0.4" rgba="0.3 0.3 0.3 0.5"/> <!-- Вертикальный стенд -->
+    <body name="button_panel" pos="0.6 -0.225 1.4" quat='0.9763 -0.2164 0 0'>
+      <geom type="box" size="0.01 0.3 0.4" rgba="0.3 0.3 0.3 0.5"/>
       
       <!-- Кнопка 1 (синяя) -->
-      <body name="button1_base" pos="-0.02 0 -0.25" quat='0.7071 0 0.7071 0'> <!-- Смещение по Z для вертикального расположения -->
+      <body name="button1_base" pos="-0.02 0 -0.25" quat='0.7071 0 0.7071 0'>
         <geom type="cylinder" size="0.05 0.01" rgba="0.1 0.1 0.1 1"/>
         <body name="button1_plunger" pos="0 0 0">
           <joint name="button1_joint" type="slide" axis="0 0 1" range="-0.05 0" limited="true" damping="1" springref="-0.05" stiffness="1"/>
-          <geom type="cylinder" size="0.05 0.005" rgba="0 0 1 1"/> <!-- Синяя кнопка -->
+          <geom type="cylinder" size="0.05 0.005" rgba="0 0 1 1"/>
         </body>
       </body>
 
@@ -38,7 +52,7 @@
         <geom type="cylinder" size="0.05 0.01" rgba="0.1 0.1 0.1 1"/>
         <body name="button2_plunger" pos="0 0 0">
           <joint name="button2_joint" type="slide" axis="0 0 1" range="-0.05 0" limited="true" damping="1" springref="-0.05" stiffness="1"/>
-          <geom type="cylinder" size="0.05 0.005" rgba="1 0 1 1"/> <!-- Розовая кнопка -->
+          <geom type="cylinder" size="0.05 0.005" rgba="1 0 1 1"/>
         </body>
       </body>
       
@@ -47,7 +61,7 @@
         <geom type="cylinder" size="0.05 0.01" rgba="0.1 0.1 0.1 1"/>
         <body name="button3_plunger" pos="0 0 0">
           <joint name="button3_joint" type="slide" axis="0 0 1" range="-0.05 0" limited="true" damping="1" springref="-0.05" stiffness="1"/>
-          <geom type="cylinder" size="0.05 0.005" rgba="0 1 0 1"/> <!-- Зелёная кнопка -->
+          <geom type="cylinder" size="0.05 0.005" rgba="0 1 0 1"/>
         </body>
       </body>
 
@@ -56,7 +70,7 @@
         <geom type="cylinder" size="0.05 0.01" rgba="0.1 0.1 0.1 1"/>
         <body name="button4_plunger" pos="0 0 0">
           <joint name="button4_joint" type="slide" axis="0 0 1" range="-0.05 0" limited="true" damping="1" springref="-0.05" stiffness="1"/>
-          <geom type="cylinder" size="0.05 0.005" rgba="1 0 0 1"/> <!-- Красная кнопка -->
+          <geom type="cylinder" size="0.05 0.005" rgba="1 0 0 1"/>
         </body>
       </body>
     
@@ -65,30 +79,14 @@
         <geom type="cylinder" size="0.05 0.01" rgba="0.1 0.1 0.1 1"/>
         <body name="button5_plunger" pos="0 0 0">
           <joint name="button5_joint" type="slide" axis="0 0 1" range="-0.05 0" limited="true" damping="1" springref="-0.05" stiffness="1"/>
-          <geom type="cylinder" size="0.05 0.005" rgba="1 1 0 1"/> <!-- Желтая кнопка -->
+          <geom type="cylinder" size="0.05 0.005" rgba="1 1 0 1"/>
         </body>
       </body>
-
     </body>
     
-    <!--
-    <body pos="0 3 2" quat='0.7071 0.7071 0 0'>
-      <geom type="plane" size="2 1 0.01" material="banner_material"/>
+    <!-- Баннер с материалом по умолчанию (скрытый) -->
+    <body name='mem-banner' pos="0 3 2" quat='0.7071 0.7071 0 0'>
+      <geom name="banner_geom" type="plane" size="2 1 0.01" material="banner_material_default"/>
     </body>
-    -->
-
   </worldbody>
-
 </mujoco>
-
-
-   
-
-      
-
-      
-
-      
-
-
-
