@@ -62,7 +62,7 @@ class ButtonBannerController:
         for i, joint_id in enumerate(self.button_joint_ids):
             # Получаем позицию кнопки (slide joint)
             button_pos = self.data.joint(joint_id).qpos[0]
-            is_pressed = button_pos > -0.025  # Порог нажатия
+            is_pressed = button_pos > -0.01  # Порог нажатия
             
             if is_pressed and not self.button_states[i]:
                 print(f"Кнопка {i+1} нажата!")
